@@ -322,10 +322,10 @@
 % Arguments: Return type, spacer, type parameter name, bound name,
 %   number of type parameters, parameter type, number of required parameters,
 %   name of optional parameters, number of optional parameters,
-%   name of `required` symbol.
+% The name of `required` symbol is always `r` (can't take 10 parms!!).
 \newcommand{\FunctionTypeNamed}[9]{%
   \FunctionType{#1}{#2}{#3}{#4}{#5}{\\
-    \mbox{}\qquad\FunctionTypeNamedArguments{#6}{#7}{#8}{#9}{#10}}}
+    \mbox{}\qquad\FunctionTypeNamedArguments{#6}{#7}{#8}{#9}{r}}}
 
 % Same as \FunctionType except suitable for inline usage, hence omitting
 % the spacer argument.
@@ -347,7 +347,7 @@
   \RawFunctionTypePositional{#1}{X}{B}{s}{T}{n}{k}}
 
 \newcommand{\FunctionTypeNamedStd}[1]{%
-  \FunctionTypeNamed{#1}{ }{X}{B}{s}{T}{n}{x}{k}{r}}
+  \FunctionTypeNamed{#1}{ }{X}{B}{s}{T}{n}{x}{k}}
 
 \newcommand{\RawFunctionTypeNamedStd}[1]{%
   \RawFunctionTypeNamed{#1}{X}{B}{s}{T}{n}{x}{k}{r}}
@@ -359,10 +359,10 @@
   \FunctionTypePositional{#1}{\\}{X}{B}{s}{T}{n}{k}}
 
 \newcommand{\FunctionTypeNamedStdCr}[1]{%
-  \FunctionTypeNamed{#1}{\\}{X}{B}{s}{T}{n}{x}{k}{r}}
+  \FunctionTypeNamed{#1}{\\}{X}{B}{s}{T}{n}{x}{k}}
 
 \newcommand{\FunctionTypeNamedStdArgCr}[1]{%
-  \FunctionTypeNamedArgCr{#1}{ }{X}{B}{s}{T}{n}{x}{k}{r}}
+  \FunctionTypeNamedArgCr{#1}{ }{X}{B}{s}{T}{n}{x}{k}}
 
 \newcommand{\FunctionTypeAllRequiredStdCr}[1]{%
   \FunctionTypeAllRequired{#1}{\\}{X}{B}{s}{T}{n}}
